@@ -82,7 +82,7 @@ def train(Weights , Bias , input_train , output_train , input_test , output_test
         Weights[1] -= learning_rate*dW2
         Weights[0] -= learning_rate*dW1
         count = accuracy(Weights[0] , Weights[1] , input_test , output_test)
-        if i%20 == 0:
+        if i%100 == 0:
             print("train accuracy :" , count/len(output_test) )
 def accuracy(W1 , W2 , input_test , output_test):
     Z1 = np.dot(input_test , W1)
